@@ -12,6 +12,16 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      textColor: {
+        primary: "#2C80E5",
+      },
+      backgroundColor: {
+        primary: "#EBF3FC",
+        "primary-darken": "#d5e6fa",
+      },
+      borderRadius: {
+        default: "10px",
+      }
     },
   },
   plugins: [],
