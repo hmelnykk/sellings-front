@@ -15,7 +15,7 @@ const SearchInput = ({ id, className, onChange }: SearchInputProps) => {
     return <div className="flex-grow">
         <div onClick={() => {
             setIsFocus(true);
-        }} className={`bg-white flex items-center gap-4 py-3 px-4 ${isFocus ? 'rounded-t-default' : 'rounded-default'}`}>
+        }} className={`relative bg-white flex items-center gap-4 py-3 px-4 ${isFocus ? 'rounded-t-default' : 'rounded-default'}`}>
             <input
                 id={id}
                 type="text"
@@ -44,7 +44,7 @@ const SearchInput = ({ id, className, onChange }: SearchInputProps) => {
             </svg>
         </div>
         {
-            isFocus && <div className="absolute w-1/2 bg-white flex gap-4 p-4 rounded-b-default border-t">
+            isFocus && <div className="absolute z-[64] shadow-lg w-1/2 bg-white flex gap-4 p-4 rounded-b-default border-t">
                 <div className="text-gray-400">
                     <p className="text-[12px] mb-4">Популярні категорії</p>
                     <ul className="[&>*]:mb-2">
