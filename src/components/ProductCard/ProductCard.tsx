@@ -13,7 +13,7 @@ const ProductCard = () => {
     return <div
             onMouseEnter={() => {setIsFocus(true)}}
             onMouseLeave={() => {setIsFocus(false)}}
-            className="relative rounded-default bg-white shadow-md p-2 space-y-1 hover:scale-[1.03]"
+            className="relative rounded-default bg-white shadow-md p-2 space-y-1 duration-100 hover:scale-[1.03]"
         >
         <div className="absolute w-[90%] flex justify-end">
             <div className="space-y-2">
@@ -59,15 +59,15 @@ const ProductCard = () => {
             <p className="text-[10px] font-bold text-blue-500">КЕШБЕК 14.88 ₴</p>
             <div className="flex items-center">
                 {
-                    Array.from({ length: rating }).map(() => (
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4 fill-amber-500">
+                    Array.from({ length: rating }).map((_, idx) => (
+                        <svg key={idx} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4 fill-amber-500">
                             <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
                         </svg>
                     ))
                 }
                 {
-                    Array.from({ length: 5 - rating }).map(() => (
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4 fill-gray-400">
+                    Array.from({ length: 5 - rating }).map((_, idx) => (
+                        <svg key={idx} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4 fill-gray-400">
                             <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
                         </svg>
                     ))

@@ -18,7 +18,9 @@ export default function RootLayout({
         className={`antialiased bg-[#F7FAFC] text-black tracking-wide`}
       >
         <Header />
-        {children}
+        <div className="container mx-auto">
+          {children}
+        </div>
       </body>
     </html>
   );
