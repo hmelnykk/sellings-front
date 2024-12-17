@@ -1,10 +1,10 @@
 'use client'
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 interface ContextMenuProps {
-    title: string | any;
-    children?: any;
+    title: string | React.ReactNode;
+    children?: React.ReactNode;
 }
 
 const ContextMenu = ({ title, children }: ContextMenuProps) => {

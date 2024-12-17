@@ -4,8 +4,6 @@ import Image from "next/image";
 import testImg from "@/assets/images/Marshall-Major-V-40-Black-01-600x600.webp"
 import { useState } from "react";
 
-interface ProductCardProps {}
-
 const ProductCard = () => {
     const [isFocus, setIsFocus] = useState<boolean>(false);
     const rating = 4;
@@ -13,7 +11,7 @@ const ProductCard = () => {
     return <div
             onMouseEnter={() => {setIsFocus(true)}}
             onMouseLeave={() => {setIsFocus(false)}}
-            className="relative rounded-default bg-white shadow-md p-2 space-y-1 duration-100 hover:scale-[1.03]"
+            className="relative rounded-default bg-white shadow-md p-2 space-y-1 duration-100 md:hover:scale-[1.03]"
         >
         <div className="absolute w-[90%] flex justify-end">
             <div className="space-y-2">
@@ -28,7 +26,7 @@ const ProductCard = () => {
             className="w-full mx-auto mb-4"
         />
         <p className="bg-[#ea7a57] rounded-default w-fit text-[10px] text-white font-bold px-1 py-[1px]">- 2500 ₴</p>
-        <p>Накладні навушники Marshall Major V Black (1006832)</p>
+        <p className="select-none">Накладні навушники Marshall Major V Black (1006832)</p>
         <div className="flex gap-2 items-end">
             <p className="text-[#ed9200] font-bold text-xl">1488 ₴</p>
             <p className="text-sm text-gray-400 font-bold line-through">3988 ₴</p>

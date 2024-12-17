@@ -9,7 +9,8 @@ interface SearchInputProps {
     onChange?: (value: string) => void;
 }
 
-const SearchInput = ({ id, className, onChange }: SearchInputProps) => {
+const SearchInput = ({ id }: SearchInputProps) => {
+    // , className, onChange
     const [isFocus, setIsFocus] = useState<boolean>(false);
 
     return <div className="flex-grow">

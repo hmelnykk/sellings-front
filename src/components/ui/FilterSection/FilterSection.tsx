@@ -1,10 +1,10 @@
 'use client'
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 interface FilterSectionProps {
     title: string;
-    children?: any;
+    children?: React.ReactNode;
     canOpen?: boolean;
 }
 

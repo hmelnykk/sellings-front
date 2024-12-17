@@ -1,9 +1,11 @@
 'use client'
 
+import React from "react";
+
 interface ButtonProps {
     name: string;
     className?: string;
-    icon?: any;
+    icon?: React.ReactNode;
 }
 
 const Button = ({ name, className, icon }: ButtonProps) => {

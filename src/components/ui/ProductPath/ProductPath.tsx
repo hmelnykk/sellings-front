@@ -1,10 +1,5 @@
 'use client'
 
-const pathItem = {
-    name: '',
-    href: '',
-}
-
 interface PathItem {
     name: string;
     href: string;
